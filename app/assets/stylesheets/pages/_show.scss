@@ -1,9 +1,57 @@
 .container {
   width: 90%;
+  height: 100%;
   margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+   i {
+     font-size: 30px;
+   }
 }
 
 .header {
   display: flex;
   justify-content: space-between;
+}
+
+.center-section {
+  height: 60vh;
+  background: white;
+  box-shadow: 0 0 15px rgba(82, 44, 44, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px;
+}
+
+.center-section img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.costume-card h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.costume-card p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.center-section .costume-card-infos {
+  padding: 16px;
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+  font-size: larger;
+  line-height: 80px;
+}
+
+.footer {
+
 }

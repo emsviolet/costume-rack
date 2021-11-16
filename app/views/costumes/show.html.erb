@@ -2,11 +2,11 @@
   <div class="header">
     <div class="header-left">
       <h1><%= @costume.name %></h1>
-      <%= image_tag "logo.png", class: "avatar"%>
+      <%= image_tag "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1770&q=80", class: "avatar"%>
       <h3><%= @costume.user.first_name %></h3>
     </div>
     <div class="header-center">
-      <ul class="star-list">
+      <ul class="list-inline">
         <li><i class="fas fa-star"></i></li>
         <li><i class="fas fa-star"></i></li>
         <li><i class="fas fa-star"></i></li>
@@ -21,5 +21,32 @@
       </div>
       <button type="button" class="button-availability">Check availability</button>
     </div>
+  </div>
+  <div class="center-section">
+      <img src="https://images.unsplash.com/photo-1542579103-8564461c32ed?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=774&q=80" />
+      <div class="costume-card-infos">
+        <div class="features">
+          <ul>
+            <li>Category</li>
+            <li>Occasion</li>
+            <li>Size</li>
+            <li>Color</li>
+            <li>Condition</li>
+          </ul>
+        </div>
+        <div class="values">
+          <ul>
+              <li><%= @costume.category %></li>
+              <li><%= @costume.occasion %></li>
+              <li><%= @costume.size %></li>
+              <li><%= @costume.color %></li>
+              <li><%= @costume.condition %></li>
+            </ul>
+        </div>
+      </div>
+
+  </div>
+  <div class="footer">
+    <p>Other occasions</p>
   </div>
 </div>
