@@ -1,18 +1,14 @@
-<%= simple_form_for [ @costume ] do |f| %>
-  <br>
-  <%= f.input :name, label: "Custom name:" %><br>
-  <%= f.input :description, label: "Description:" %><br>
-  <%= f.input :size, collection: Costume::SIZES, label: "Costume size:" %><br>
-  <%= f.input :category, collection: Costume::CATEGORIES, label: "Costume category:" %><br>
-  <%= f.input :color, collection: Costume::COLORS, label: "Costume color:"%><br>
-  <%= f.input :price %><br>
-  <%= f.input :occasion, collection: Costume::OCCASIONS, label: "Costume occasion:" %><br>
-  <%= f.input :condition, collection: Costume::CONDITIONS, label: "Costume condition:" %><br>
-  <%= f.input :photo, as: :file %>
-  <br>
-  <%= f.submit "Create new costume", class: "btn btn-primary" %>
-<% end %>
-
-
-<%# <%= cl_image_tag(@costume.photo.key,
-      width: 400, height: 300, crop: :fill) %>
+  <%= simple_form_for [ @costume ] do |f| %>
+    <br>
+    <%= f.input :name, label: "Custom name:" %><br>
+    <%= f.input :description, label: "Description:" %><br>
+    <%= f.input :size, collection: Costume::SIZES, label: "Costume size:" %><br>
+    <%= f.input :category, collection: Costume::CATEGORIES, label: "Costume category:" %><br>
+    <%= f.input :color, collection: Costume::COLORS, label: "Costume color:"%><br>
+    <%= f.input :price %><br>
+    <%= f.input :occasion, collection: Costume::OCCASIONS, label: "Costume occasion:" %><br>
+    <%= f.input :condition, collection: Costume::CONDITIONS, label: "Costume condition:" %><br>
+    <%= f.input :photo, as: :file %>
+    <br>
+    <%= f.submit "Create new costume", class: "btn btn-primary" %>
+  <% end %>
