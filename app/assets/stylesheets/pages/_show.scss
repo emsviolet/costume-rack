@@ -1,3 +1,6 @@
+body {
+  background-color: #CFFFE5;
+}
 .container {
   width: 90%;
   height: 100%;
@@ -8,11 +11,19 @@
      font-size: 30px;
    }
 }
-
 .header {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 30px;
+  align-items: center;
+  min-height: 15vh;
 }
+.owner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 
 .center-section {
   height: 60vh;
@@ -22,36 +33,47 @@
   justify-content: space-between;
   align-items: center;
   padding: 24px;
+  border-radius: 5px;
+    .price {
+  text-align: right;
+  margin-bottom: 0;
+}
 }
 
 .center-section img {
   height: 100%;
   object-fit: cover;
-}
-
-.costume-card h2 {
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0;
-}
-
-.costume-card p {
-  font-size: 12px;
-  line-height: 1.4;
-  opacity: .7;
-  margin-bottom: 0;
-  margin-top: 8px;
+  flex-grow: 1;
 }
 
 .center-section .costume-card-infos {
   padding: 16px;
   display: flex;
-  flex-grow: 1;
+  flex-direction: column;
   justify-content: space-between;
   font-size: larger;
-  line-height: 80px;
+  height: 100%;
+    .icons {
+      text-align: right;
+      display: flex;
+      justify-content: space-between;
+    }
+    ul {
+      padding-left: 0px;
+    }
+    p {
+      margin-bottom: 30px;
+    }
 }
 
-.footer {
+.costume-details {
+  li {
+    margin: 15px;
+  }
+}
 
+.values {
+  text-align: right;
+  padding-left: 0;
+  padding-right: 50px;
 }
