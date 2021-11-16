@@ -1,0 +1,85 @@
+.categorieslist {
+  margin-top: 40px;
+  list-style: none;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+
+  li {
+    transition: box-shadow 0.3s ease-in-out;
+    padding: 20px;
+    margin: 0 20px;
+    border-radius: 5%;
+    text-align: center;
+
+    &:hover {
+      box-shadow: 0 4px 6px 2px rgba(0, 0, 0, 0.05);
+      text-transform: translate(0,-2px);
+    }
+  }
+
+  .list-icon {
+    height: 80px;
+    width: 80px;
+    position: relative;
+    background-size: cover;
+    filter: grayscale(1);
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      filter: grayscale(0);
+      transform: translate(0,-2px);
+    }
+
+    &.clown {
+      background-image: url("https://cdn-icons-png.flaticon.com/512/2155/2155388.png");
+    }
+
+    &.halloween {
+    background-image: url("https://cdn-icons-png.flaticon.com/512/717/717250.png");
+    }
+
+    &.mask {
+    background-image: url('https://cdn-icons-png.flaticon.com/512/545/545186.png');
+    }
+
+    &.pirates {
+    background-image: url("https://cdn-icons.flaticon.com/png/512/3066/premium/3066718.png?token=exp=1637082267~hmac=dcf94c5a031d97604cdb902214940cc8");
+    }
+
+    &.santa {
+    background-image: url('https://cdn-icons-png.flaticon.com/512/621/621873.png');
+    }
+
+    &.animals {
+    background-image: url("https://cdn-icons.flaticon.com/png/512/1141/premium/1141499.png?token=exp=1637082315~hmac=03f51e8fac60383ac0a31c4527759955");
+    }
+  }
+}
+
+// .button-bubble {
+//   width: 50px;
+//   height: 50px;
+//   border-radius: 25px;
+//   background: #FF6100;
+//   border: none;
+//   padding: 0;
+//   transition: background-color 280ms ease-in;
+// }
+
+// button {
+//     appearance: auto;
+//     text-rendering: auto;
+//     color: white;
+//     letter-spacing: normal;
+//     word-spacing: normal;
+//     line-height: normal;
+//     text-transform: none;
+//     text-indent: 0px;
+//     text-shadow: none;
+//     display: inline-block;
+//     text-align: center;
+//     align-items: flex-start;
+//     cursor: default;
+//     margin: 0em;
+// }
