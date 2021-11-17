@@ -8,20 +8,17 @@
         </ul>
       </div>
     </div>
-    <form class="new-costume-pt-two">
+    <div class="new-costume-pt-two">
       <div class="form-group">
-        <%= simple_form_for [ @costume ] do |f| %>
-          <div class="form-display">
-
-            <div class="step-one" style="display: block">
-              <h1 class="form-instruction"><strong>Step 1:</strong> Upload costume picture</h1>
-              <div class="col-12 form-group line">
+        <%= simple_form_for @costume do |f| %>
+          <div class="container">
+            <div class="step-one text-center" style="display: block">
+              <h1 class=""><strong>Step 1:</strong> Upload costume picture</h1>
                 <%= f.input :photo, as: :file, label: "Photo of the costume:" %><br>
-              </div>
             </div>
 
-            <div class="step-two" style="display: none">
-            <h1 class="form-instruction"><strong>Step 2:</strong> Add costume name & description</h1>
+            <div class="step-two text-center" style="display: none">
+              <h1 class="form-instruction"><strong>Step 2:</strong> Add costume name & description</h1>
               <div class="col-12 form-group line">
                 <%= f.input :name, label: "Costume name:" %><br>
               </div>
@@ -30,8 +27,8 @@
               </div>
             </div>
 
-            <div class="step-three" style="display: none">
-            <h1 class="form-instruction"><strong>Step 3:</strong> What's the occasion?<br>  ...and for whom?</h1>
+            <div class="step-three text-center" style="display: none">
+              <h1 class="form-instruction"><strong>Step 3:</strong> What's the occasion?<br>  ...and for whom?</h1>
               <div class="col-12 form-group line">
                 <%= f.input :occasion, collection: Costume::OCCASIONS, label: "Costume occasion:" %><br>
               </div>
@@ -40,10 +37,10 @@
               </div>
             </div>
 
-            <div class="step-four" style="display: none">
-            <h1 class="form-instruction"><strong>Step 4:</strong> Please specify last couple of details. And the $ of course! </h1>
-              <div class="form-row">
-                <div class="col-6 form-group line">
+            <div class="step-four text-center" style="display: none">
+              <h1 class="form-instruction"><strong>Step 4:</strong> Please specify last couple of details. And the $ of course! </h1>
+              <div class="form-row col-10 mx-auto">
+                <div class="col-6 form-group line mx-auto">
                   <%= f.input :size, collection: Costume::SIZES, label: "Costume size:" %>
                 </div>
                 <div class="col-6 form-group line">
@@ -56,19 +53,19 @@
               <div class="col-12 form-group line">
                 <%= f.input :price %><br>
               </div>
+              <%= f.submit "Create new costume", class: "btn btn-primary" %><br>
+
             </div>
 
 
-            <button class="next-step btn-styling">next step</button>
 
 
-            <div class="submit" style="display: none">
-              <div class="col-6 form-group">
-                <%= f.submit "Create new costume", class: "btn btn-primary btn-styling" %><br>
-              </div>
-            </div>
           </div>
+
+
         <% end %>
       </div>
-    </form>
+
+      <button class="next-step btn-styling">next step</button>
+    </div>
   </div>
