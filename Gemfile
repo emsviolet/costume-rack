@@ -27,6 +27,7 @@ gem 'jbuilder', '~> 2.7'
 
 #Added by emily
 gem 'devise'
+gem 'faker'
 #Added by Sasha for the 'new create costume' feature
 gem 'simple_form'
 #Added by Sasha. Gem for creation of .env file
