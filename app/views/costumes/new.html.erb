@@ -11,10 +11,10 @@
     <div class="new-costume-pt-two">
       <div class="form-group">
         <%= simple_form_for @costume do |f| %>
-          <div class="container">
+          <div class="container form-container">
             <div class="step-one text-center" style="display: block">
               <h1 class=""><strong>Step 1:</strong> Upload costume picture</h1>
-                <%= f.input :photo, as: :file, label: "Photo of the costume:" %><br>
+                <%= f.input :photo, as: :file, label: "..." %><br>
             </div>
 
             <div class="step-two text-center" style="display: none">
@@ -40,20 +40,20 @@
             <div class="step-four text-center" style="display: none">
               <h1 class="form-instruction"><strong>Step 4:</strong> Please specify last couple of details. And the $ of course! </h1>
               <div class="form-row col-10 mx-auto">
-                <div class="col-6 form-group line mx-auto">
+                <div class="col-5 form-group line mx-auto">
                   <%= f.input :size, collection: Costume::SIZES, label: "Costume size:" %>
                 </div>
-                <div class="col-6 form-group line">
+                <div class="col-5 form-group line">
                   <%= f.input :color, collection: Costume::COLORS, label: "Costume color:"%>
                 </div>
               </div>
-              <div class="col-12 form-group line">
+              <div class="form-group col-10 mx-auto line">
                 <%= f.input :condition, collection: Costume::CONDITIONS, label: "Costume condition:" %>
               </div>
-              <div class="col-12 form-group line">
-                <%= f.input :price %><br>
+              <div class="form-group col-10 mx-auto line">
+                <%= f.input :price, label: "Costume price:" %><br>
               </div>
-              <%= f.submit "Create new costume", class: "btn btn-primary" %><br>
+              <%= f.submit "Create new costume", class: "btn btn-form-submit" %><br>
 
             </div>
 

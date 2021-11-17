@@ -34,3 +34,10 @@ document.addEventListener('turbolinks:load', () => {
   // initSelect2();
   multiStepForm()
 });
+
+// geocoding by Piero
+import { initMapbox } from '../plugins/init_mapbox';
+
+document.addEventListener('turbolinks:load', () => {
+  initMapbox();
+})
