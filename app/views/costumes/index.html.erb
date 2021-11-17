@@ -1,34 +1,36 @@
-
 <div class="costumes_index">
   <div class="left">
-    <h1>Halloween costumes neaby</h1>
+
+    <h1> All Costumes nearby you:</h1>
     <div class="buttons">
-    <a href="#" class="myButton">Type</a>
-    <a href="#" class="myButton">Price</a>
-    <a href="#" class="myButton">Condition</a>
-  </div>
+      <a href="#" class="filter-button">Category</a>
+      <a href="#" class="filter-button">Occasion</a>
+      <a href="#" class="filter-button">Condition</a>
+    </div>
+
   <div class="cards">
     <% @costumes.each do |costume| %>
-      <div class="card">
-        <% if costume.photo.attached? %>
-        <%= cl_image_tag costume.photo.key, class: "card-img"%>
-        <% end %>
-        <div class="card-text">
-          <%= costume.name %>
-          <%= costume.price %>
+      <%= link_to costume_path(costume) do %>
+        <div class="card">
+          <% if costume.photo.attached? %>
+            <%= cl_image_tag costume.photo.key, class: "card-img"%>
+          <% end %>
+          <div class="card-text">
+            <%= costume.name %>
+            <%= costume.price %>
+          </div>
         </div>
-      </div>
+      <% end %>
     <% end %>
   </div>
   </div>
+
   <div class="right">
-    <div class="mapouter">
-      <div class="gmap_canvas">
-        <iframe width="650" height="700" id="gmap_canvas" src="https://maps.google.com/maps?q=barcelona&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
-        </iframe>
-        <style>.mapouter{position:relative;text-align:right;height:100%;width:100%;}</style>
-        <style>.gmap_canvas {overflow:hidden;background:none!important;height:100%;width:100%;border-radius: 50px;}</style>
-      </div>
-    </div>
+    <div id="map"
+     style="width: 100%; height: 600px;"
+     data-markers="<%= @markers.to_json %>"
+     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+     </div>
   </div>
+
 </div>
