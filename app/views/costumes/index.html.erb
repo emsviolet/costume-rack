@@ -1,12 +1,13 @@
-
 <div class="costumes_index">
   <div class="left">
-    <h1>Hallowen costumes nearby</h1>
+    <h1> All Costumes nearby you:</h1>
+
     <div class="buttons">
-      <a href="#" class="myButton">Type</a>
-      <a href="#" class="myButton">Price</a>
-      <a href="#" class="myButton">Condition</a>
+      <a href="#" class="filter-button">Category</a>
+      <a href="#" class="filter-button">Occasion</a>
+      <a href="#" class="filter-button">Condition</a>
     </div>
+
     <div class="cards">
       <% @costumes.each do |costume| %>
         <div class="card">
@@ -21,6 +22,7 @@
       <% end %>
     </div>
   </div>
+
   <div class="right">
     <div class="mapouter">
       <div class="gmap_canvas">
@@ -31,4 +33,5 @@
       </div>
     </div>
   </div>
+
 </div>
