@@ -17,19 +17,19 @@
           <li><i class="far fa-star"></i></li>
         </ul>
         <div class="owner">
-          <p><%= @costume.user.first_name %></p>
-          <%= image_tag "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1770&q=80", class: "avatar"%>
+          <p class="owner"><%= @costume.user.first_name %></p>
+          <%= image_tag "https://i5.walmartimages.com/asr/768c1077-d262-40bc-872d-cfd3ae86b33f_1.0cac95463c1774eef3e93d818ce3320e.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF", class: "avatar dropdown-toggle avatar-square"%>
         </div>
         <%# <p><i class="fas fa-heart"></i> <i class="far fa-comment-alt"></i></p> %>
       </div>
       <div class="features">
         <p><%= @costume.description %></p>
         <ul class="costume-details">
-          <li><%= image_tag "user.png", class: "costume-icons" %>  <%= @costume.category.capitalize %></li>
-          <li><%= image_tag "party.png", class: "costume-icons" %>  <%= @costume.occasion.capitalize %></li>
-          <li><%= image_tag "measuring-tape.png", class: "costume-icons" %>  <%= @costume.size.capitalize %></li>
-          <li><%= image_tag "color-palette.png", class: "costume-icons" %>  <%= @costume.color.capitalize %></li>
-          <li><%= image_tag "needle.png", class: "costume-icons" %>  <%= @costume.condition.capitalize %></li>
+          <li><%= image_tag "man.png", class: "costume-icons" %>  <%= @costume.category.capitalize %></li>
+          <li><%= image_tag "party-popper.png", class: "costume-icons" %>  <%= @costume.occasion.capitalize %></li>
+          <li><%= image_tag "size-guide.png", class: "costume-icons" %>  <%= @costume.size.capitalize %></li>
+          <li><%= image_tag "colorchoice.png", class: "costume-icons" %>  <%= @costume.color.capitalize %></li>
+          <li><%= image_tag "condition.png", class: "costume-icons" %>  <%= @costume.condition.capitalize %></li>
         </ul>
       </div>
       <div class="price">
