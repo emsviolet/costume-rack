@@ -11,10 +11,10 @@
     <div class="new-costume-pt-two">
       <div class="form-group">
         <%= simple_form_for @costume do |f| %>
-          <div class="container">
+          <div class="container form-container">
             <div class="step-one text-center" style="display: block">
               <h1 class=""><strong>Step 1:</strong> Upload costume picture</h1>
-                <%= f.input :photo, as: :file, label: "Photo of the costume:" %><br>
+                <%= f.input :photo, as: :file, label: "..." %><br>
             </div>
 
             <div class="step-two text-center" style="display: none">
@@ -51,9 +51,9 @@
                 <%= f.input :condition, collection: Costume::CONDITIONS, label: "Costume condition:" %>
               </div>
               <div class="form-group col-10 mx-auto line">
-                <%= f.input :price %><br>
+                <%= f.input :price, label: "Costume price:" %><br>
               </div>
-              <%= f.submit "Create new costume", class: "btn btn-primary" %><br>
+              <%= f.submit "Create new costume", class: "btn btn-form-submit" %><br>
 
             </div>
 
