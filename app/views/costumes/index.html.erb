@@ -122,6 +122,27 @@
          </div>
       </div>
     </div>
+    <h1>Halloween costumes neaby</h1>
+    <div class="buttons">
+    <a href="#" class="myButton">Type</a>
+    <a href="#" class="myButton">Price</a>
+    <a href="#" class="myButton">Condition</a>
+  </div>
+  <div class="cards">
+    <% @costumes.each do |costume| %>
+      <%= link_to costume_path(costume) do %>
+        <div class="card">
+          <% if costume.photo.attached? %>
+            <%= cl_image_tag costume.photo.key, class: "card-img"%>
+          <% end %>
+          <div class="card-text">
+            <%= costume.name %>
+            <%= costume.price %>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
   </div>
   <div class="right">
     <div id="map"

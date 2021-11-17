@@ -1,5 +1,5 @@
 .categorieslist {
-  margin-top: 40px;
+  margin-top: 80px;
   list-style: none;
   padding: 0;
   justify-content: center;
@@ -19,8 +19,11 @@
   }
 
   .list-icon {
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
     height: 80px;
-    width: 80px;
+    width: 90px;
     position: relative;
     background-size: cover;
     filter: grayscale(1);
@@ -31,7 +34,7 @@
       transform: translate(0,-2px);
     }
 
-    &.clown {
+    &.clown{
       background-image: url("https://cdn-icons-png.flaticon.com/512/2155/2155388.png");
     }
 
@@ -44,7 +47,7 @@
     }
 
     &.pirates {
-    background-image: url("https://cdn-icons.flaticon.com/png/512/3066/premium/3066718.png?token=exp=1637082267~hmac=dcf94c5a031d97604cdb902214940cc8");
+    background-image: asset-url("pirate.png");
     }
 
     &.santa {
@@ -52,34 +55,18 @@
     }
 
     &.animals {
-    background-image: url("https://cdn-icons.flaticon.com/png/512/1141/premium/1141499.png?token=exp=1637082315~hmac=03f51e8fac60383ac0a31c4527759955");
+    background-image: asset-url("bee.png");
     }
   }
 }
 
-// .button-bubble {
-//   width: 50px;
-//   height: 50px;
-//   border-radius: 25px;
-//   background: #FF6100;
-//   border: none;
-//   padding: 0;
-//   transition: background-color 280ms ease-in;
-// }
+.cardcontent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-// button {
-//     appearance: auto;
-//     text-rendering: auto;
-//     color: white;
-//     letter-spacing: normal;
-//     word-spacing: normal;
-//     line-height: normal;
-//     text-transform: none;
-//     text-indent: 0px;
-//     text-shadow: none;
-//     display: inline-block;
-//     text-align: center;
-//     align-items: flex-start;
-//     cursor: default;
-//     margin: 0em;
-// }
+  p {
+    margin-bottom: 0;
+  }
+
+}

@@ -15,18 +15,17 @@
   <body>
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
-    <%= yield %>
+    <div style="min-height: 90vh;"><%= yield %></div>
+    <%= render 'shared/footer' %>
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="slick/slick.min.js"></script>
-
     <script type="text/javascript">
     $(document).ready(function(){
       $('.categorymover').slick({
         // setting-name: setting-value
       });
     });
-
   </script>
   </body>
 </html>
