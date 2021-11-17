@@ -13,7 +13,7 @@ class CostumesController < ApplicationController
 
   def create
     @costume = Costume.new(costume_params)
-    if @costume.save
+    if @costume.save!
       # redirect_to user profile - but maybe index for now
     else
       render :new
