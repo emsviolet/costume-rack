@@ -28,6 +28,13 @@ gem 'jbuilder', '~> 2.7'
 #Added by emily
 gem 'devise'
 gem 'faker'
+#Added by Sasha for the 'new create costume' feature
+gem 'simple_form'
+#Added by Sasha. Gem for creation of .env file
+gem 'dotenv-rails', groups: [:development, :test]
+#Added by Sasha. Cloudinary gem.
+gem 'cloudinary', '~> 1.16.0'
+
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
