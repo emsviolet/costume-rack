@@ -1,25 +1,25 @@
 
 <div class="costumes_index">
   <div class="left">
-    <h1>Hallowen costumes nearby</h1>
+    <h1>Halloween costumes neaby</h1>
     <div class="buttons">
-      <a href="#" class="myButton">Type</a>
-      <a href="#" class="myButton">Price</a>
-      <a href="#" class="myButton">Condition</a>
-    </div>
-    <div class="cards">
-      <% @costumes.each do |costume| %>
-        <div class="card">
-          <% if costume.photo.attached? %>
-          <%= cl_image_tag costume.photo.key, class: "card-img"%>
-          <% end %>
-          <div class="card-text">
-            <%= costume.name %>
-            <%= costume.price %>
-          </div>
+    <a href="#" class="myButton">Type</a>
+    <a href="#" class="myButton">Price</a>
+    <a href="#" class="myButton">Condition</a>
+  </div>
+  <div class="cards">
+    <% @costumes.each do |costume| %>
+      <div class="card">
+        <% if costume.photo.attached? %>
+        <%= cl_image_tag costume.photo.key, class: "card-img"%>
+        <% end %>
+        <div class="card-text">
+          <%= costume.name %>
+          <%= costume.price %>
         </div>
-      <% end %>
-    </div>
+      </div>
+    <% end %>
+  </div>
   </div>
   <div class="right">
     <div class="mapouter">
