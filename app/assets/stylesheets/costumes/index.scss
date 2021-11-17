@@ -1,7 +1,6 @@
 .costumes_index {
     width: 100vw;
     display: flex;
-    padding: 20px;
     .left {
       width: 50%;
       height: 100%;
@@ -11,23 +10,27 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-gap: 16px;
-        justify-content: space-between;
         .card {
           height: 200px;
           width: 200px;
 
+          .img {
+            margin: 5px;
+          }
           .card-img {
             height: 80%;
-            width: 90%;
+            width: 95%;
             background-color: grey;
           }
 
           .text {
-            height: 20%;
+            height: 15%;
             width: 100%;
             background-color: white;
-            padding: 10px;
+            padding: 5%;
             display: flex;
+            justify-content: center;
+            align-items: center;
           }
         }
       }
@@ -39,9 +42,8 @@
       margin: 0;
       position:sticky;
       top:0px;
-      .mapouter {
-        border: 2px solid #5465FF;
-        border-radius: 50px;
+      #map {
+        // edit if you want
       }
     }
 }
@@ -50,13 +52,31 @@
   padding: 10px 0px;
 }
 
+
 .filter-button {
   background-color: #FF6100;
   color: white;
+}
+
+.myButton {
+	box-shadow: 3px 4px 0px 0px #FF6911;
+	background:linear-gradient(to bottom, #ededed 5%, #bab1ba 100%);
+	background-color:#ededed;
 	border-radius:15px;
 	display:inline-block;
 	cursor:pointer;
   padding: 13px 15px;
+	color:#696c6d;
+	font-family:Arial;
+	font-size:17px;
+	padding:7px 25px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #e1e2ed;
+}
+
+.myButton:hover {
+	background:linear-gradient(to bottom, #bab1ba 5%, #ededed 100%);
+	background-color:#bab1ba;
   text-decoration: none;
   transition: all 0.3s ease;
 }
