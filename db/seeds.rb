@@ -42,8 +42,8 @@ booking_1 = Booking.create!(
   user: user_1,
   status: 0,
   costume: costume_2
- )
+)
 
- puts "total users: #{User.count}"
- puts "total Costumes: #{Costume.count}"
- puts "total bookings: #{Booking.count}"
+puts "total users: #{User.count}"
+puts "total Costumes: #{Costume.count}"
+puts "total bookings: #{Booking.count}"

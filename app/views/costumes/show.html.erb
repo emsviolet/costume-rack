@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="header">
+    <div class="costume-name">
+      <h1><%= @costume.name %></h1>
+    </div>
+    <button type="button" class="button-availability">Check availability</button>
+  </div>
+  <div class="center-section">
+    <img src="https://images.unsplash.com/photo-1542579103-8564461c32ed?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=774&q=80" />
+    <div class="costume-card-infos">
+      <div class="icons">
+        <ul class="list-inline">
+          <li><i class="fas fa-star"></i></li>
+          <li><i class="fas fa-star"></i></li>
+          <li><i class="fas fa-star"></i></li>
+          <li><i class="far fa-star"></i></li>
+          <li><i class="far fa-star"></i></li>
+        </ul>
+        <div class="owner">
+          <p><%= @costume.user.first_name %></p>
+          <%= image_tag "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1770&q=80", class: "avatar"%>
+        </div>
+        <%# <p><i class="fas fa-heart"></i> <i class="far fa-comment-alt"></i></p> %>
+      </div>
+      <div class="features">
+        <p><%= @costume.description %></p>
+        <ul class="costume-details">
+          <li><%= image_tag "user.png", class: "costume-icons" %>  <%= @costume.category.capitalize %></li>
+          <li><%= image_tag "party.png", class: "costume-icons" %>  <%= @costume.occasion.capitalize %></li>
+          <li><%= image_tag "measuring-tape.png", class: "costume-icons" %>  <%= @costume.size.capitalize %></li>
+          <li><%= image_tag "color-palette.png", class: "costume-icons" %>  <%= @costume.color.capitalize %></li>
+          <li><%= image_tag "needle.png", class: "costume-icons" %>  <%= @costume.condition.capitalize %></li>
+        </ul>
+      </div>
+      <div class="price">
+        <p>€<%= @costume.price %></p>
+      </div>
+    </div>
+  </div>
+</div>
