@@ -1,0 +1,71 @@
+
+  <div class="new-costume-container">
+    <div class="new-costume-pt-one">
+      <div class="new-costume-img" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1604909126668-5b27173eae4d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1064&q=80)">
+        <ul>
+          <li><h1><strong>Prepare your costume!</strong></h1></li>
+          <li><p>Let's upload it to <em class="mark-text">Costume<span class="orange-font">Rack</span></em></p></li>
+        </ul>
+      </div>
+    </div>
+    <div class="new-costume-pt-two">
+      <div class="form-group">
+        <%= simple_form_for @costume do |f| %>
+          <div class="container">
+            <div class="step-one text-center" style="display: block">
+              <h1 class=""><strong>Step 1:</strong> Upload costume picture</h1>
+                <%= f.input :photo, as: :file, label: "Photo of the costume:" %><br>
+            </div>
+
+            <div class="step-two text-center" style="display: none">
+              <h1 class="form-instruction"><strong>Step 2:</strong> Add costume name & description</h1>
+              <div class="col-12 form-group line">
+                <%= f.input :name, label: "Costume name:" %><br>
+              </div>
+              <div class="col-12 form-group line">
+                <%= f.input :description, label: "Costume description:" %><br>
+              </div>
+            </div>
+
+            <div class="step-three text-center" style="display: none">
+              <h1 class="form-instruction"><strong>Step 3:</strong> What's the occasion?<br>  ...and for whom?</h1>
+              <div class="col-12 form-group line">
+                <%= f.input :occasion, collection: Costume::OCCASIONS, label: "Costume occasion:" %><br>
+              </div>
+              <div class="col-12 form-group line">
+                <%= f.input :category, collection: Costume::CATEGORIES, label: "Costume category:" %><br>
+              </div>
+            </div>
+
+            <div class="step-four text-center" style="display: none">
+              <h1 class="form-instruction"><strong>Step 4:</strong> Please specify last couple of details. And the $ of course! </h1>
+              <div class="form-row col-10 mx-auto">
+                <div class="col-6 form-group line mx-auto">
+                  <%= f.input :size, collection: Costume::SIZES, label: "Costume size:" %>
+                </div>
+                <div class="col-6 form-group line">
+                  <%= f.input :color, collection: Costume::COLORS, label: "Costume color:"%>
+                </div>
+              </div>
+              <div class="col-12 form-group line">
+                <%= f.input :condition, collection: Costume::CONDITIONS, label: "Costume condition:" %>
+              </div>
+              <div class="col-12 form-group line">
+                <%= f.input :price %><br>
+              </div>
+              <%= f.submit "Create new costume", class: "btn btn-primary" %><br>
+
+            </div>
+
+
+
+
+          </div>
+
+
+        <% end %>
+      </div>
+
+      <button class="next-step btn-styling">next step</button>
+    </div>
+  </div>
