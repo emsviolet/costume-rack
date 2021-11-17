@@ -8,115 +8,17 @@
       <a href="#" class="myButton">Condition</a>
     </div>
     <div class="cards">
-      <div class="card"><img src="" alt="">
-        <div class="img"><img src="" alt=""></div>
-         <div class="text">
-          <p>item1</p>
-          <h2 class></h2>
-         </div>
-      </div>
-       <div class="card">
-        <div class="img"></div>
-         <div class="text">
-          <p>item2</p>
-         </div>
-      </div>
-      <div class="card">
-        <div class="img"></div>
-         <div class="text">
-          <p>item3</p>
-         </div>
-      </div>
-      <div class="card">
-        <div class="img"></div>
-         <div class="text">
-          <p>item2</p>
-         </div>
-      </div>
-      <div class="card">
-        <div class="img"></div>
-         <div class="text">
-          <p>item2</p>
-         </div>
-      </div>
-      <div class="card">
-        <div class="img"></div>
-         <div class="text">
-          <p>item2</p>
-         </div>
-      </div>
-      <div class="card">
-        <div class="img"></div>
-         <div class="text">
-          <p>item2</p>
-         </div>
-      </div>
-      <div class="card">
-        <div class="img"></div>
-         <div class="text">
-          <p>item2</p>
-         </div>
-      </div>
-      <div class="card">
-        <div class="img"></div>
-         <div class="text">
-          <p>item3</p>
-         </div>
-      </div>
-      <div class="card">
-        <div class="img"></div>
-         <div class="text">
-          <p>item3</p>
-         </div>
-      </div>
-      <div class="card">
-        <div class="img"></div>
-         <div class="text">
-          <p>item3</p>
-         </div>
-      </div>
-      <div class="card">
-        <div class="img"></div>
-         <div class="text">
-          <p>item3</p>
-         </div>
-      </div>
-      <div class="card">
-        <div class="img"></div>
-         <div class="text">
-          <p>item3</p>
-         </div>
-      </div>
-      <div class="card">
-        <div class="img"></div>
-         <div class="text">
-          <p>item3</p>
-         </div>
-      </div>
-      <div class="card">
-        <div class="img"></div>
-         <div class="text">
-          <p>item3</p>
-         </div>
-      </div>
-      <div class="card">
-        <div class="img"></div>
-         <div class="text">
-          <p>item3</p>
-         </div>
-      </div>
-      <div class="card">
-        <div class="img"></div>
-         <div class="text">
-          <p>item3</p>
-         </div>
-      </div>
-      <div class="card">
-        <div class="img"></div>
-         <div class="text">
-          <p>item3</p>
-         </div>
-      </div>
+      <% @costumes.each do |costume| %>
+        <div class="card">
+          <% if costume.photo.attached? %>
+          <%= cl_image_tag costume.photo.key, class: "card-img"%>
+          <% end %>
+          <div class="card-text">
+            <%= costume.name %>
+            <%= costume.price %>
+          </div>
+        </div>
+      <% end %>
     </div>
   </div>
   <div class="right">
