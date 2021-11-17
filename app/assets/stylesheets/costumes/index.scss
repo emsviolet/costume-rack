@@ -1,7 +1,6 @@
 .costumes_index {
     width: 100vw;
     display: flex;
-    padding: 20px;
     .left {
       width: 50%;
       height: 100%;
@@ -43,9 +42,8 @@
       margin: 0;
       position:sticky;
       top:0px;
-      .mapouter {
-        border: 2px solid #5465FF;
-        border-radius: 50px;
+      #map {
+        // edit if you want
       }
     }
 }
