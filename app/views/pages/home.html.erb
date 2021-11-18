@@ -15,52 +15,48 @@
 
   <div>
     <ul class="categorieslist d-flex">
-    <a href="/costumes#">
+    <%= link_to costumes_path(occasion: "birthday") do %>
       <li class="clown">
         <div class="list-icon clown">
         </div>
          Birthday
       </li>
-    </a>
-    <a href="/costumes#">
+    <% end %>
+    <%= link_to costumes_path(occasion: "halloween") do %>
       <li class="halloween">
         <div class="list-icon halloween">
         </div>
         <p> Halloween </p>
       </li>
-    </a>
-
-    <a href="/costumes#">
+    <% end %>
+    <%= link_to costumes_path(occasion: "carnival")  do %>
       <li class="mask">
         <div class="list-icon mask">
         </div>
         <p> Carnival </p>
       </li>
-    </a>
-
-    <a href="/costumes#">
+    <% end %>
+    <%= link_to costumes_path(occasion: "party")  do %>
       <li class="pirates">
         <div class="list-icon pirates">
         </div>
         <p> Party </p>
       </li>
-    </a>
-
-    <a href="/costumes#">
+    <% end %>
+    <%= link_to costumes_path(occasion: "christmas")  do %>
       <li class="santa">
         <div class="list-icon santa">
         </div>
         <p> Christmas </p>
       </li>
-    </a>
-
-    <a href="/costumes#">
+    <% end %>
+    <%= link_to costumes_path(occasion: "animals")  do %>
       <li class="animals">
         <div class="list-icon animals">
         </div>
         <p> Animals </p>
       </li>
-    </a>
+    <% end %>
     </ul>
   </div>
 </div>

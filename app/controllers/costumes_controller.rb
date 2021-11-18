@@ -1,6 +1,6 @@
 class CostumesController < ApplicationController
   def index
-    @costumes = Costume.geocoded
+    @costumes = Costume.geocoded.where(occasion: params[:occasion])
     @markers = @costumes.geocoded.map do |costume|
       {
         lat: costume.latitude,
