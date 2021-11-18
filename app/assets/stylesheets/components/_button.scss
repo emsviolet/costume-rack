@@ -40,7 +40,7 @@
 }
 
 .btn-flat:hover {
-  background: #e65a03;
+  background: #FF6100;
   color: white;
   border-radius: 50px;
 }
@@ -48,13 +48,15 @@
 .btn-flat-search {
   margin-top: 30px;
   color: white;
-  background: #ff00f2;
+  background: #FF6100;
   transition: 0.3s ease;
   border-radius: 50px;
   height: 40px;
   width: 200px;
   display: flex;
   justify-content: center;
+  margin: auto;
+  margin-left: 5px;
 }
 
 .btn-flat-search:hover {
