@@ -129,7 +129,7 @@ costume_7 = Costume.create!(
   name: 'prisoner',
   description: 'orange boiler suit and shackles',
   size: 'XL',
-  location: 'gotico',
+  location: 'Nou barris',
   category: 'men',
   color: 'yellow',
   price: 15,
