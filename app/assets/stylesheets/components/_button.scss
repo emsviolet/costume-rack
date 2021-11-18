@@ -61,6 +61,18 @@
 
 .btn-flat-search:hover {
   background: #c800be;
-  color: white;
   border-radius: 50px;
+}
+
+.btn-flat-search-index {
+  color: white;
+  background: #FF6911;
+  transition: 0.3s ease;
+  border-radius: 50px;
+  height: 38px;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  margin-left: 10px;
+  margin-bottom: 10px;
 }
