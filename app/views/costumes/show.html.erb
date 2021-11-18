@@ -1,12 +1,12 @@
 <div class="container">
   <div class="header">
     <div class="costume-name">
-      <h1><%= @costume.name %></h1>
+      <h1><%= @costume.name.capitalize %></h1>
     </div>
     <button type="button" class="button-availability">Check availability</button>
   </div>
   <div class="center-section">
-    <img src="https://images.unsplash.com/photo-1542579103-8564461c32ed?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=774&q=80" />
+    <%= cl_image_tag @costume.photo.key, class: "costume-img" %>
     <div class="costume-card-infos">
       <div class="icons">
         <ul class="list-inline">
@@ -19,9 +19,7 @@
         <div class="owner">
           <p class="owner"><%= @costume.user.first_name %></p>
           <%= image_tag "https://i5.walmartimages.com/asr/768c1077-d262-40bc-872d-cfd3ae86b33f_1.0cac95463c1774eef3e93d818ce3320e.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF", class: "avatar dropdown-toggle avatar-square"%>
-
         </div>
-        <%# <p><i class="fas fa-heart"></i> <i class="far fa-comment-alt"></i></p> %>
       </div>
       <div class="features">
         <p><%= @costume.description %></p>
