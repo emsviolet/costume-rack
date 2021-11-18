@@ -24,8 +24,6 @@ body {
   align-items: center;
   margin: 0 10px;
 }
-
-
 .center-section {
   height: 60vh;
   background: white;
@@ -38,12 +36,13 @@ body {
     .price {
   text-align: right;
   margin-bottom: 0;
-}
+  }
 }
 
-.center-section img {
+.center-section .costume-img {
   height: 100%;
   object-fit: cover;
+  object-position: center;
   flex-grow: 1;
 }
 

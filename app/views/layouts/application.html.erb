@@ -21,11 +21,13 @@
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="slick/slick.min.js"></script>
     <script type="text/javascript">
-    $(document).ready(function(){
-      $('.categorymover').slick({
-        // setting-name: setting-value
+    if (document.querySelector('.categorymover')) {
+      $(document).ready(function(){
+        $('.categorymover').slick({
+          // setting-name: setting-value
+        });
       });
-    });
+    }
   </script>
   </body>
 </html>
