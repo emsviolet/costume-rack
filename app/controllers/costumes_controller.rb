@@ -1,6 +1,10 @@
 class CostumesController < ApplicationController
   def index
+    if params[:occasion]
     @costumes = Costume.geocoded.where(occasion: params[:occasion])
+    elsif params[:category]
+      @costumes = Costume.geocoded.where(category: params[:category])
+    end
     @markers = @costumes.geocoded.map do |costume|
       {
         lat: costume.latitude,
