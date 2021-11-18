@@ -24,7 +24,8 @@ require("channels")
 
 // External imports
 import "bootstrap";
-import multiStepForm from "./multi_step_form"
+import multiStepForm from "./multi_step_form";
+import multiStepFormBooking from "./multi_step_form_booking";
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
@@ -32,7 +33,8 @@ import multiStepForm from "./multi_step_form"
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
-  multiStepForm()
+  multiStepForm();
+  multiStepFormBooking();
 });
 
 // geocoding by Piero
