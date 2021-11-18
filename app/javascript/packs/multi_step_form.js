@@ -16,20 +16,24 @@ const multiStepForm = () => {
       const descriptionInput = document.querySelector("#costume_description").value;
       const occasionInput = document.querySelector("#costume_occasion").value;
       const categoryInput = document.querySelector("#costume_category").value;
+      const conditionInput = document.querySelector("#costume_condition").value;
       const sizeInput = document.querySelector("#costume_size").value;
       const colorInput = document.querySelector("#costume_color").value;
-      const conditionInput = document.querySelector("#costume_condition").value;
+      const locationInput = document.querySelector("#costume_location").value;
       const priceInput = document.querySelector("#costume_price").value;
+
 
       console.log(photoInput);
       console.log(nameInput);
       console.log(descriptionInput);
       console.log(occasionInput);
       console.log(categoryInput);
+      console.log(conditionInput);
       console.log(sizeInput);
       console.log(colorInput);
-      console.log(conditionInput);
+      console.log(locationInput);
       console.log(priceInput);
+
 
       const currentStep = document.querySelector(`.${allSteps[counter]}`);
       display(currentStep);
