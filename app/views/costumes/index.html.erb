@@ -1,7 +1,12 @@
 <div class="costumes_index">
   <div class="left">
-
-    <h1> All Costumes nearby you:</h1>
+    <% if params[:occasion] %>
+      <h1><%= params[:occasion].capitalize %> costumes</h1>
+    <% elsif params[:category] %>
+       <h1><%= params[:category].capitalize %>'s costumes</h1>
+    <% else %>
+         <h1><%= params[:query] %></h1>
+    <% end %>
     <div class="buttons">
       <a href="#" class="filter-button">Category</a>
       <a href="#" class="filter-button">Occasion</a>
