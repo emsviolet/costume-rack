@@ -1,11 +1,15 @@
 class CostumesController < ApplicationController
   def index
-    @costumes = Costume.geocoded
-    @markers = @costumes.geocoded.map do |costume|
+    if params[:query].present?
+      @costumes = Costume.geocoded.where("name ILIKE ?", "%#{params[:query]}%")
+      @markers = @costumes.geocoded.map do |costume|
       {
         lat: costume.latitude,
         lng: costume.longitude
       }
+    end
+    else
+      @costumes = Costume.all
     end
   end
 

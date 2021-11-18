@@ -3,6 +3,17 @@
     <div class="slogan"><p>Rent costumes or lend someone your costume </p></div>
 </div>
 
+<div class = "searchbardiv">
+  <%= form_tag costumes_path, method: :get do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control searchbar-design",
+    placeholder: "Find a costume"
+  %>
+  <%= submit_tag "Search", class: "btn btn-flat-search" %>
+</div>
+<% end %>
+
 <%# <div class="home-categories-list d-flex">
   <div class="button-bubble button-bubble--left">
     <button class="button-bubble button-bubble--left">
