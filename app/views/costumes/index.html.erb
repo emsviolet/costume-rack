@@ -1,7 +1,7 @@
 <div class="costumes_index">
   <div class="left">
 
-    <h1> All Costumes nearby you:</h1>
+    <h1> <%= params[:occasion] ? "#{params[:occasion].capitalize} costumes nearby you:" : "#{params[:category].capitalize}' costumes nearby you:" %> </h1>
     <div class="buttons">
       <a href="#" class="filter-button">Category</a>
       <a href="#" class="filter-button">Occasion</a>

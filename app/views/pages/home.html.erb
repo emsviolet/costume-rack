@@ -26,52 +26,48 @@
 
   <div>
     <ul class="categorieslist d-flex">
-    <a href="/costumes#">
+    <%= link_to costumes_path(occasion: "birthday") do %>
       <li class="clown">
         <div class="list-icon clown">
         </div>
          Birthday
       </li>
-    </a>
-    <a href="/costumes#">
+    <% end %>
+    <%= link_to costumes_path(occasion: "halloween") do %>
       <li class="halloween">
         <div class="list-icon halloween">
         </div>
         <p> Halloween </p>
       </li>
-    </a>
-
-    <a href="/costumes#">
+    <% end %>
+    <%= link_to costumes_path(occasion: "carnival")  do %>
       <li class="mask">
         <div class="list-icon mask">
         </div>
         <p> Carnival </p>
       </li>
-    </a>
-
-    <a href="/costumes#">
+    <% end %>
+    <%= link_to costumes_path(occasion: "party")  do %>
       <li class="pirates">
         <div class="list-icon pirates">
         </div>
         <p> Party </p>
       </li>
-    </a>
-
-    <a href="/costumes#">
+    <% end %>
+    <%= link_to costumes_path(occasion: "christmas")  do %>
       <li class="santa">
         <div class="list-icon santa">
         </div>
         <p> Christmas </p>
       </li>
-    </a>
-
-    <a href="/costumes#">
+    <% end %>
+    <%= link_to costumes_path(occasion: "animals")  do %>
       <li class="animals">
         <div class="list-icon animals">
         </div>
         <p> Animals </p>
       </li>
-    </a>
+    <% end %>
     </ul>
   </div>
 </div>
@@ -94,19 +90,19 @@
 
 <div class= "usertypecards d-flex">
 
-  <a href="/costumes#" class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.pexels.com/photos/7139728/pexels-photo-7139728.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260)">
+  <%= link_to costumes_path(category: "kids"), class: "card-category", style: "background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.pexels.com/photos/7139728/pexels-photo-7139728.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260)" do %>
     Children
-  </a>
+  <% end %>
 
-  <a href="/costumes#" class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1623967199-cupcake-costume-food-halloween-costume-1623967146.jpg)">
+  <%= link_to costumes_path(category: "women"), class: "card-category", style: "background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1623967199-cupcake-costume-food-halloween-costume-1623967146.jpg)" do %>
     Females
-  </a>
+  <% end %>
 
-  <a href="/costumes#" class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://spy.com/wp-content/uploads/2021/07/sfv-1.jpg)">
+  <%= link_to costumes_path(category: "men"), class: "card-category", style: "background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://spy.com/wp-content/uploads/2021/07/sfv-1.jpg)" do %>
     Males
-  </a>
+  <% end %>
 
-  <a href="/costumes#" class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://img.money.com/2017/10/171018-dog-halloween-costumes.jpg)">
+<%= link_to costumes_path(category: "men"), class: "card-category", style: "background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://img.money.com/2017/10/171018-dog-halloween-costumes.jpg)" do %>
     Pets
-  </a>
+  <% end %>
 </div>
