@@ -1,2 +1,33 @@
 <div class="new-booking-container">
+
+  <div class="form-group">
+    <%= simple_form_for @booking do |f| %>
+    <div class="form-container">
+
+      <div class="page-one-booking" style="display: block">
+        <h1>Amazing costume find!<h1>
+        <p>Let's go through these next <strong>super</strong> simple steps to send a booking request!</p>
+      </div>
+
+      <div class="page-two-booking" style="display: none">
+        <h1><strong>Step 1:</strong> For how long would you like to rent the costume?<h1>
+        <%= f.input :end_date, label: "Costume return date" %><br>
+        <%= f.input :start_date, label: "Costume pick-up date" %><br>
+      </div>
+
+      <div class="page-three-booking" style="display: none">
+        <h1><strong>Step 2:</strong> Any additional final words you would like to add to your request?<h1>
+        <%= f.input :message, label: "Your sweet message:" %><br>
+      </div>
+
+      <div class="page-four-booking" style="display: none">
+        <h1><strong>Step 3:</strong> Push the button to submit the request!<h1>
+        <%= f.submit "Send costume request!", class: "btn btn-form-submit" %><br>
+      </div>
+
+    </div>
+    <%end%>
+    <button class="next-step btn-styling">next step</button>
+
+  </div>
 </div>

@@ -25,6 +25,7 @@ require("channels")
 // External imports
 import "bootstrap";
 import multiStepForm from "./multi_step_form"
+import multiStepFormBooking from "./multi_step_form_booking"
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
