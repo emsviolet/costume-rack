@@ -13,6 +13,8 @@ class CostumesController < ApplicationController
         {
           lat: costume.latitude,
           lng: costume.longitude
+          info_window: render_to_string(partial: "info_window", locals: { costume: costume }),
+          image_url: helpers.asset_url("CostumeRack.png") # Here you can change the mark
         }
       end
   end
@@ -33,6 +35,11 @@ class CostumesController < ApplicationController
     else
       render :new
     end
+  end
+
+  def search
+
+
   end
 
   private
