@@ -7,6 +7,18 @@
     <% else %>
          <h1><%= params[:query] %></h1>
     <% end %>
+
+    <div>
+      <%= form_tag costumes_path, method: :get, class: "form-inline" do %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control searchbar-design-index",
+        placeholder: "Find a costume"
+      %>
+      <%= submit_tag "Search", class: "btn btn-flat-search-index" %>
+    </div>
+    <% end %>
+
     <div class="buttons">
       <a href="#" class="filter-button">Category</a>
       <a href="#" class="filter-button">Occasion</a>
@@ -21,8 +33,8 @@
             <%= cl_image_tag costume.photo.key, class: "card-img"%>
           <% end %>
           <div class="card-text">
-            <%= costume.name %>
-            <%= costume.price %>
+            <%= costume.name.capitalize %>
+            <p class="pricelocation"><%= costume.price%>€/per day</p>
           </div>
         </div>
       <% end %>

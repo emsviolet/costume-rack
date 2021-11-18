@@ -10,26 +10,39 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-gap: 16px;
+        margin-top: 10px;
         .card {
-          height: 200px;
+          height: 220px;
           width: 200px;
-
+          border-radius: 10px;
+          border: 1px solid transparent;
           .img {
             margin: 5px;
           }
           .card-img {
             height: 80%;
-            width: 95%;
+            width: 100%;
             background-color: grey;
+            justify-content: center;
+            align-items: center;
+            border-top-right-radius: 10px;
+            border-top-left-radius: 10px;
           }
 
-          .text {
+          .pricelocation {
+            margin-top: 0;
+            margin-bottom: 0;
+          }
+
+          .card-text {
+            color: black;
+            text-align: center;
             height: 15%;
             width: 100%;
             background-color: white;
             padding: 5%;
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
           }
         }
@@ -50,12 +63,6 @@
 
 .buttons {
   padding: 10px 0px;
-}
-
-
-.filter-button {
-  background-color: #FF6100;
-  color: white;
 }
 
 .myButton {
@@ -81,8 +88,45 @@
   transition: all 0.3s ease;
 }
 
+
+.filter-button {
+  color: #FF6100;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: white;
+  border: 1px solid #FF6100;
+  transition: 0.3s ease;
+  border-radius: 50px;
+  height: 40px;
+  width: 200px;
+}
+
 .filter-button:hover {
-	background-color: #e65a03;
-  color: white;
+  background: white;
+  color: #c84d01;
+  border: 1px solid #FF6100;
+  border-radius: 50px;
+}
+
+a{
   text-decoration: none;
 }
+
+.costumesearchfilter {
+  display: flex;
+  justify-content: space-between;
+}
+
+.searchbardivindex {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card:hover {
+  transform: translate(0,-2px);
+  box-shadow: 0 2px 5px 1px rgba(64, 60, 67, .16);
+  border: 1px solid transparent;
+}
+
+a:hover {text-decoration: none;}
