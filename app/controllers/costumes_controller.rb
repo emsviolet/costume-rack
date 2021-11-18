@@ -9,14 +9,14 @@ class CostumesController < ApplicationController
     else
       @costumes = Costume.all
     end
-     @markers = @costumes.geocoded.map do |costume|
-        {
-          lat: costume.latitude,
-          lng: costume.longitude
-          info_window: render_to_string(partial: "info_window", locals: { costume: costume }),
-          image_url: helpers.asset_url("CostumeRack.png") # Here you can change the mark
-        }
-      end
+    @markers = @costumes.geocoded.map do |costume|
+      {
+        lat: costume.latitude,
+        lng: costume.longitude,
+        info_window: render_to_string(partial: "info_window", locals: { costume: costume }),
+        image_url: helpers.asset_url("pin.png") # Here you can change the mark
+      }
+    end
   end
 
   def show
