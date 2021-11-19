@@ -32,13 +32,17 @@
         <div class="dash-card">
           <%= cl_image_tag recieved_booking.costume.photo.key %>
           <div class="dash-card-infos">
-            <h6><strong><%= recieved_booking.costume.name %></strong></h6>
-            <p><%= recieved_booking.costume.description %></p>
-            <p>Status: <%= recieved_booking.status%></p>
-            <p>Total price: <strong><%= recieved_booking.total_price %>€</strong></p>
-            <% if recieved_booking.pending? %>
-              <%= link_to "Accept request", booking_path(recieved_booking, { status: "accepted" }), method: :patch %>
-            <% end %>
+            <div>
+              <h6><strong><%= recieved_booking.costume.name %></strong></h6>
+              <p><%= recieved_booking.costume.description %></p>
+              <p>Status: <%= recieved_booking.status%></p>
+              <p>Total price: <strong><%= recieved_booking.total_price %>€</strong></p>
+            </div>
+            <div>
+              <% if recieved_booking.pending? %>
+                <%= link_to "Accept request", booking_path(recieved_booking, { status: "accepted" }), method: :patch, class: "button-accept" %>
+              <% end %>
+            </div>
           </div>
         </div>
         <% end %>
