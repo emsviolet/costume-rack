@@ -1,5 +1,5 @@
 .categorieslist {
-  margin-top: 60px;
+  margin-top: 30px;
   list-style: none;
   padding: 0;
   justify-content: center;
@@ -70,7 +70,6 @@
   p {
     margin-bottom: 0;
   }
-
 }
 
 a:hover {
@@ -80,11 +79,15 @@ a:hover {
 .occasions {
   text-align: center;
   margin-top: 10px;
-  font-size: 25px;
+  font-size: 30px;
+  color: #ffa36a;
+  font-weight: bold;
 }
 
 .persona {
   text-align: center;
-  margin-top: 180px;
-  font-size: 25px;
+  margin-top: 70px;
+  font-size: 30px;
+  color: #ffa36a;
+  font-weight: bold;
 }
