@@ -12,12 +12,12 @@
       <div class="form-group">
         <%= simple_form_for @costume do |f| %>
           <div class="container form-container">
-            <div class="step-one text-center" style="display: block">
-              <h1 class=""><strong>Step 1:</strong> Upload costume picture</h1>
-                <%= f.input :photo, as: :file, label: "..." %><br>
+            <div class="step-one text-center fix" style="display: block">
+              <h1 class="form-instruction"><strong>Step 1:</strong> Upload your costume picture!</h1>
+                <%= f.input :photo, as: :file, label: "Attachment:" %><br>
             </div>
 
-            <div class="step-two text-center" style="display: none">
+            <div class="step-two text-center fix" style="display: none">
               <h1 class="form-instruction"><strong>Step 2:</strong> Add costume name & description</h1>
               <div class="col-12 form-group line">
                 <%= f.input :name, label: "Costume name:" %><br>
@@ -40,7 +40,7 @@
               </div>
             </div>
 
-            <div class="step-four text-center" style="display: none">
+            <div class="step-four text-center fix" style="display: none">
               <h1 class="form-instruction"><strong>Step 4:</strong> Please specify last couple of details. And the $ of course! </h1>
               <div class="form-row col-10 mx-auto">
                 <div class="col-6 form-group line mx-auto">
