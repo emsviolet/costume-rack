@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   resources :costumes do
     resources :bookings, only: %i[new create]
   end
+  resource :dashboard, only: [:show]
 end
