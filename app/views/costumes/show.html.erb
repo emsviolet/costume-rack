@@ -1,13 +1,14 @@
 <div class="container">
-  <div class="header">
-    <div class="costume-name">
-      <h1><%= @costume.name.capitalize %></h1>
-    </div>
-    <button type="button" class="button-availability">Check availability</button>
-  </div>
   <div class="center-section">
     <%= cl_image_tag @costume.photo.key, class: "costume-img" %>
-    <div class="costume-card-infos">
+    <div class="costume-card-infos list-inline">
+      <div class="owner">
+        <div class="costume-name">
+        <h1><%= @costume.name.capitalize %></h1>
+        </div>
+        <p class="owner" style = "padding-left: 400px"><%= @costume.user.first_name %></p>
+        <%= image_tag "https://i5.walmartimages.com/asr/768c1077-d262-40bc-872d-cfd3ae86b33f_1.0cac95463c1774eef3e93d818ce3320e.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF", class: "avatar dropdown-toggle avatar-square"%>
+      </div>
       <div class="icons">
         <ul class="list-inline">
           <li><i class="fas fa-star"></i></li>
@@ -16,10 +17,6 @@
           <li><i class="far fa-star"></i></li>
           <li><i class="far fa-star"></i></li>
         </ul>
-        <div class="owner">
-          <p class="owner"><%= @costume.user.first_name %></p>
-          <%= image_tag "https://i5.walmartimages.com/asr/768c1077-d262-40bc-872d-cfd3ae86b33f_1.0cac95463c1774eef3e93d818ce3320e.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF", class: "avatar dropdown-toggle avatar-square"%>
-        </div>
       </div>
       <div class="features">
         <p><%= @costume.description %></p>
@@ -33,6 +30,9 @@
       </div>
       <div class="price">
         <p>€<%= @costume.price %></p>
+      </div>
+      <div class="header">
+        <button type="button" class="button-availability">Check availability</button>
       </div>
     </div>
   </div>
