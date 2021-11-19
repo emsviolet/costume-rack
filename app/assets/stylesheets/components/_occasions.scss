@@ -1,5 +1,5 @@
 .categorieslist {
-  margin-top: 80px;
+  margin-top: 60px;
   list-style: none;
   padding: 0;
   justify-content: center;
@@ -12,6 +12,7 @@
     border-radius: 5%;
     text-align: center;
     color: black;
+    height: 150px;
 
     &:hover {
       box-shadow: 0 4px 6px 2px rgba(0, 0, 0, 0.05);
@@ -23,13 +24,12 @@
     // display: flex;
     // justify-content: center;
     // align-items: center;
-    height: 80px;
-    width: 90px;
+    height: 100px;
+    width: 100px;
     position: relative;
     background-size: cover;
-    filter: grayscale(1);
+    filter: grayscale(0.5);
     transition: all 0.3s ease-in-out;
-
 
     &:hover {
       filter: grayscale(0);
@@ -75,4 +75,16 @@
 
 a:hover {
   text-decoration: none;
+}
+
+.occasions {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 25px;
+}
+
+.persona {
+  text-align: center;
+  margin-top: 180px;
+  font-size: 25px;
 }
