@@ -21,7 +21,7 @@ class BookingsController < ApplicationController
     @booking = Booking.find(params[:id])
 
     if param[:status] == "accepted"
-      # @boooking.update(status: "accepted")
+      # @booking.update(status: "accepted")
       @booking.accepted!
     elsif param[:status] == "declined"
       # @boooking.update(status: "declined")
