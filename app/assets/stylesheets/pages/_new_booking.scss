@@ -1,9 +1,10 @@
 .new-booking-container {
    display: flex;
-   background-color: #ffc490;
+   background-color: white;
    margin: 100px 150px;
    height: 600px;
    border-radius: 10px;
+   box-shadow: 0px 0px 15px rgba(82, 44, 44, 0.2);
 
    .new-booking {
      height: 100%;
