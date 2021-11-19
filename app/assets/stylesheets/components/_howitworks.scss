@@ -1,0 +1,61 @@
+.stepslist {
+  margin-top: 10px;
+  list-style: none;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  height: 280px;
+
+  .step {
+    padding: 20px;
+    margin: 0 60px;
+    text-align: center;
+    height: 150px;
+    width: 300px;
+  }
+
+  .step-icon {
+    position: relative;
+    background-size: cover;
+
+    &.step1{
+      background-image: asset-url("Step1.png");
+      height: 250px;
+      width: 350px;
+    }
+
+    &.step2{
+      background-image: asset-url("Step2.png");
+      height: 250px;
+      width: 300px;
+    }
+
+    &.step3{
+      background-image: asset-url("Step3.png");
+      height: 250px;
+      width: 300px;
+    }
+  }
+}
+
+.cardcontent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    margin-bottom: 0;
+  }
+
+}
+
+.howitworks {
+  text-align: center;
+  margin-top: 70px;
+  font-size: 25px;
+}
+
+.steptext {
+  margin-top: 20px;
+  width: 200px;
+}
