@@ -23,11 +23,13 @@ class BookingsController < ApplicationController
     if params[:status] == "accepted"
       # @booking.update(status: "accepted")
       @booking.accepted!
+      redirect_to dashboard_path, notice: "Successfully accepted"
     elsif params[:status] == "declined"
       # @boooking.update(status: "declined")
       @booking.declined!
+      redirect_to dashboard_path, notice: "Successfully decline"
     end
-    redirect_to dashboard_path, notice: "Successfully updated"
+
   end
 
   private
