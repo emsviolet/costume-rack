@@ -1,36 +1,44 @@
 <div class="container">
   <div class="user-info d-flex align-items-center">
-      <h1><%= current_user.first_name %></h1>
-      <%= image_tag "user.png", class: "avatar" %>
+    <h1> Welcome to your dashboard <%= current_user.first_name %>!</h1>
+    <%= image_tag "woman.png", class: "avatar" %>
+  </div>
+  <div class="user-data">
+      <p>My costumes: <strong><%= @costumes.count %></strong></p>
+      <p>My requests: <strong><%= @recieved_bookings.count %></strong></p>
+      <p>My pending requests: <strong><%= @bookings.count %></strong></p>
     </div>
   <div class="bookings-division">
-    <div class="sent_bookings">
+    <div class="sent-bookings border-right">
+      <h4>Sent requests</h4>
       <div class="dash-cards">
         <% @bookings.each do | booking | %>
         <div class="dash-card">
           <%= cl_image_tag booking.costume.photo.key %>
           <div class="dash-card-infos">
-            <ul>
-              <li><%= booking.costume.name %></li>
-              <li><%= booking.costume.description %></li>
-              <li><%= booking.total_price %></li>
-            </ul>
+            <h6><strong><%= booking.costume.name.capitalize %></strong></h6>
+            <p><%= booking.costume.description.capitalize %></p>
+            <p>Status: <%= booking.status%></p>
+            <p>Total price: <strong><%= booking.total_price %>€</strong></p>
           </div>
         </div>
         <% end %>
       </div>
     </div>
-    <div class="recieved_bookings">
+    <div class="recieved-bookings">
+      <h4>Recieved requests</h4>
       <div class="dash-cards">
         <% @recieved_bookings.each do | recieved_booking | %>
         <div class="dash-card">
           <%= cl_image_tag recieved_booking.costume.photo.key %>
           <div class="dash-card-infos">
-            <ul>
-              <li><%= recieved_booking.costume.name %></li>
-              <li><%= recieved_booking.costume.description %></li>
-              <li><%= recieved_booking.total_price %></li>
-            </ul>
+            <h6><strong><%= recieved_booking.costume.name %></strong></h6>
+            <p><%= recieved_booking.costume.description %></p>
+            <p>Status: <%= recieved_booking.status%></p>
+            <p>Total price: <strong><%= recieved_booking.total_price %>€</strong></p>
+            <% if recieved_booking.pending? %>
+              <%= link_to "Accept request", booking_path(recieved_booking, { status: "accepted" }), method: :patch %>
+            <% end %>
           </div>
         </div>
         <% end %>
