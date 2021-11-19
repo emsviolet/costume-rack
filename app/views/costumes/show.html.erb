@@ -32,7 +32,9 @@
         <p>€<%= @costume.price %></p>
       </div>
       <div class="header">
-        <button type="button" class="button-availability">Check availability</button>
+        <%= link_to new_costume_booking_path(@costume) do %>
+          <button type="button" class="button-availability">Book this costume!</button>
+        <% end %>
       </div>
     </div>
   </div>
