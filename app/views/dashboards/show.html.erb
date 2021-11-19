@@ -1,17 +1,40 @@
 <div class="container">
   <div class="user-info d-flex align-items-center">
-    <h1><%= current_user.first_name %></h1>
-    <%= image_tag "user.png", class: "avatar" %>
-  </div>
-  <div class="dash-cards">
-    <% @bookings.each do | booking | %>
-    <div class="dash-card">
-      <ul>
-        <li><%= booking.costume.name %></li>
-        <li><%= booking.costume.description %></li>
-        <li><%= booking.total_price %></li>
-      </ul>
+      <h1><%= current_user.first_name %></h1>
+      <%= image_tag "user.png", class: "avatar" %>
     </div>
-    <% end %>
+  <div class="bookings-division">
+    <div class="sent_bookings">
+      <div class="dash-cards">
+        <% @bookings.each do | booking | %>
+        <div class="dash-card">
+          <%= cl_image_tag booking.costume.photo.key %>
+          <div class="dash-card-infos">
+            <ul>
+              <li><%= booking.costume.name %></li>
+              <li><%= booking.costume.description %></li>
+              <li><%= booking.total_price %></li>
+            </ul>
+          </div>
+        </div>
+        <% end %>
+      </div>
+    </div>
+    <div class="recieved_bookings">
+      <div class="dash-cards">
+        <% @recieved_bookings.each do | recieved_booking | %>
+        <div class="dash-card">
+          <%= cl_image_tag recieved_booking.costume.photo.key %>
+          <div class="dash-card-infos">
+            <ul>
+              <li><%= recieved_booking.costume.name %></li>
+              <li><%= recieved_booking.costume.description %></li>
+              <li><%= recieved_booking.total_price %></li>
+            </ul>
+          </div>
+        </div>
+        <% end %>
+      </div>
+    </div>
   </div>
 </div>
