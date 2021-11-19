@@ -3,10 +3,10 @@
     <%= cl_image_tag @costume.photo.key, class: "costume-img" %>
     <div class="costume-card-infos list-inline">
       <div class="owner">
-        <div class="costume-name">
+        <div class="costume-name mr-5">
         <h1><%= @costume.name.capitalize %></h1>
         </div>
-        <p class="owner" style = "padding-left: 400px"><%= @costume.user.first_name %></p>
+        <p class="owner" style = ""><%= @costume.user.first_name %></p>
         <%= image_tag "https://i5.walmartimages.com/asr/768c1077-d262-40bc-872d-cfd3ae86b33f_1.0cac95463c1774eef3e93d818ce3320e.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF", class: "avatar dropdown-toggle avatar-square"%>
       </div>
       <div class="icons">
@@ -20,10 +20,14 @@
       </div>
       <div class="features">
         <p><%= @costume.description %></p>
-        <ul class="costume-details">
+        <ul class="costume-details mt-3">
           <li><%= image_tag "man.png", class: "costume-icons" %>  <%= @costume.category.capitalize %></li>
           <li><%= image_tag "party-popper.png", class: "costume-icons" %>  <%= @costume.occasion.capitalize %></li>
           <li><%= image_tag "size-guide.png", class: "costume-icons" %>  <%= @costume.size.capitalize %></li>
+
+        </ul>
+        <ul class="costume-details mt-3">
+
           <li><%= image_tag "colorchoice.png", class: "costume-icons" %>  <%= @costume.color.capitalize %></li>
           <li><%= image_tag "condition.png", class: "costume-icons" %>  <%= @costume.condition.capitalize %></li>
         </ul>
@@ -31,7 +35,7 @@
       <div class="price">
         <p>€<%= @costume.price %></p>
       </div>
-      <div class="header">
+      <div class="header justify-content-end"">
         <%= link_to new_costume_booking_path(@costume) do %>
           <button type="button" class="button-availability">Book this costume!</button>
         <% end %>
