@@ -40,10 +40,11 @@ body {
     text-shadow: 1px 1px 4px rgba(194, 194, 194, 0.685);
   }
   .orange-font {
-    color: #FF6100;;
+    color: #FF6100;
   }
-  .mark-text {
-    background-color:#58555279;
+  .green-font {
+    color: #68e1ad;
+    font-weight: bold;
   }
 }
 
@@ -60,7 +61,7 @@ body {
     top: 20px;
     left: 20px;
     font-size: 30px;
-    padding: 50px 50px;
+    padding: 50px 10px;
     text-align: center;
     // position: absolute;
     margin: 8px 27px;
