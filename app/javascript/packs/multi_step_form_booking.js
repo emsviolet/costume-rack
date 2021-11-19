@@ -7,19 +7,20 @@ const multiStepFormBooking = () => {
   nextStepButton.addEventListener("click", (event) => {
     event.preventDefault();
 
-    const startDateYearInput = document.querySelector("#booking_start_date_1i").value;
-    const startDateMonthInput = document.querySelector("#booking_start_date_2i").value;
-    const startDateDateInput = document.querySelector("#booking_start_date_3i").value;
+    // console.log(startDateMonthInput)
+    // const startDateYearInput = document.querySelector("#booking_start_date_1i").value;
+    // const startDateMonthInput = document.querySelector("#booking_start_date_2i").value;
+    // const startDateDateInput = document.querySelector("#booking_start_date_3i").value;
 
-    const endDateYearInput = document.querySelector("#booking_end_date_1i").value;
-    const endDateMonthInput = document.querySelector("#booking_end_date_2i").value;
-    const endDateDateInput = document.querySelector("#booking_end_date_3i").value;
+    // const endDateYearInput = document.querySelector("#booking_end_date_1i").value;
+    // const endDateMonthInput = document.querySelector("#booking_end_date_2i").value;
+    // const endDateDateInput = document.querySelector("#booking_end_date_3i").value;
 
-    const MessageInput = document.querySelector("#booking_message").value;
+    // const MessageInput = document.querySelector("#booking_message").value;
 
-    console.log(startDateYearInput, startDateMonthInput, startDateDateInput);
-    console.log(endDateYearInput, endDateMonthInput, endDateDateInput);
-    console.log(MessageInput);
+    // console.log(startDateYearInput, startDateMonthInput, startDateDateInput);
+    // console.log(endDateYearInput, endDateMonthInput, endDateDateInput);
+    // console.log(MessageInput);
 
     const currentStep = document.querySelector(`.${allSteps[counter]}`);
     display(currentStep);
@@ -40,7 +41,7 @@ const multiStepFormBooking = () => {
 
 function display(element) {
   if (element.style.display === "none") {
-    element.style.display = "block";
+    element.style.display = "flex";
   } else {
     element.style.display = "none";
   }

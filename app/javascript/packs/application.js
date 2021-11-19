@@ -26,6 +26,8 @@ require("channels")
 import "bootstrap";
 import multiStepForm from "./multi_step_form";
 import multiStepFormBooking from "./multi_step_form_booking";
+import { initMapbox } from '../plugins/init_mapbox';
+import { initFlatpickr } from '../plugins/flatpickr';
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
@@ -35,11 +37,7 @@ document.addEventListener('turbolinks:load', () => {
   // initSelect2();
   multiStepForm();
   multiStepFormBooking();
-});
-
-// geocoding by Piero
-import { initMapbox } from '../plugins/init_mapbox';
-
-document.addEventListener('turbolinks:load', () => {
+  // geocoding by Piero
   initMapbox();
-})
+  initFlatpickr();
+});
